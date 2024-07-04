@@ -1,0 +1,244 @@
+/*폰트 설정--미정*/
+
+/*초기 설정*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;/*스크롤 부드럽게*/
+}
+#container {
+	position:relative;
+	width: 100%;
+	height: auto;
+	background-color: lightgrey;
+}
+
+ul li, ol li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*** 레이아웃 확인하기 위한 장치 ***/
+#container {
+	background-color: white;
+}
+#home {
+	background-color: lightgrey;
+	border: 1px solid darkgrey;
+}
+#title, /*.menu1,*/ .menu2 {
+	border: 1px solid darkgrey;
+}
+#about {
+	background-color: lightpink;
+	border: 1px solid darkgrey;
+}
+#skills {
+	background-color: lightyellow;
+	border: 1px solid darkgrey;
+}
+#activity{
+	background-color: lightgreen;
+	border: 1px solid darkgrey;
+}
+#contact{
+	background-color: lightblue;
+	border: 1px solid darkgrey;
+}
+
+/*** 레이아웃 크기 지정 ***/
+#container {
+	position:relative;
+	margin:0 auto;
+	width: 100%;
+	height: auto;
+	padding: 0;
+}
+#home{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+#about, #skills, #activity, #contact {
+ 	height: auto;
+ 	padding-bottom: 5%;
+ }
+
+/*** 디자인 구체화 ***/
+/***공통 디자인***/
+#content_about h3, #content_skills h3, #content_activity h3, #content_contact h3{
+	font-size: 35px;
+	text-align: center;
+}
+.content{
+	font-size: 20px;
+	margin: 0px 10px;
+	padding: 0px 10px;
+} 
+#content_about, #content_skills, #content_activity,#content_contact {
+	margin: 7% 20% 0% 20%;
+	padding: 20px 5% 20px 5%;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 25px;
+}
+
+
+/*** home ***/
+#home{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0,0,0,0.5)) ,url('../images/futurism1.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	/*filter:brightness(70%);/*모두 다 까매지는 문제 발생->linear-gradient를 이용*/
+}
+.menu1 {
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	width: 43%;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.5);
+}
+.menu2 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding: 5px;
+	z-index: 100;/*다른 레이아웃에서도 뜰 수 있도록*/
+	background-color: black;
+}
+.menu1 li, .menu2 li {
+	display: inline; /*혹은 block으로 바꿔도 괜찮음*/
+	padding: 5px 10px;
+	float: center;
+}
+.menu1 li a {
+	font-size: 25px;
+	font-weight:600;
+	margin-left: 25px;
+	color: white;
+	cursor: pointer; /*커서 모양이 바뀌도록*/
+}
+.menu1 li a:hover, .menu2 li a:hover{
+	color: yellow;
+}
+.menu2 li a {
+	font-size: 25px;
+	font-weight:100;
+	margin-left: 170px;
+	color: white;
+	cursor: pointer; /*커서 모양이 바뀌도록*/
+}
+
+#title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 5px 15px 15px 17px;
+	font-size: 60px;
+	font-weight: 600;
+	color: white;
+	text-align: center;
+}
+
+/*** about ***/
+#about img{
+	padding: 5px;
+	margin: 5px;
+	width: 40%;
+	margin: 10px;
+	float:left;
+}
+#about .content{
+	width: 100%;
+	padding: 5px;
+	margin: 0px 0px 30px 0px;
+	display: inline-block;
+	border:3px dashed black;
+	border-radius:10px;
+}
+
+/*** Skills ***/
+#skills img{
+	width: 20%;
+	margin: 20px;
+	display: inline;
+	background-color: lightgrey;
+	border-radius: 50%;
+}
+#skills img:hover{
+	background-color: antiquewhite;
+	cursor: pointer;
+	transition:0.2s;
+	width:20.5%;
+
+}
+
+/*** Activity ***/
+#activity img{
+	padding: 5px;
+	margin: 5px;
+	width: 40%;
+	margin: 10px;
+	float:left;
+}
+#activity .content{
+	width: 100%;
+	padding: 5px;
+	margin: 0px 0px 30px 0px;
+	display:inline-block;
+	border-radius: 10px;
+	background:rgba(0,0,0, 0.5);
+	color:white;
+}
+
+
+
+/*** contact ***/
+#contact .content {
+	padding:0% 10% 0% 10%;
+	height:400px;
+}
+#contact p {
+	font-size: 25px;
+	font-weight: 600;
+	text-align: center;
+}
+#contact .content > div{
+	position:relative;
+	display: block;
+	width: 200px;
+	left:52%;
+	transform: translateX(-50%);
+	margin:20px 0px;
+	border:1px solid darkgrey;
+}
+#contact .content > div:hover {
+	background-color: white;
+}
+#contact img{
+	width: 30px;
+	margin: 10px;
+	display: inline;
+}
+
+#contact label{
+	position: absolute;
+	transform: translate(5px, 10px);
+	color: black;
+	text-align: center;
+}
+#contact label:hover{
+	color: yellowgreen;
+}
+#mail, #instagram, #github, #tistory{
+	cursor: pointer;
+}
