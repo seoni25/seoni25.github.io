@@ -1,5 +1,3 @@
-//alert("안녕");
-//$("#menu1")클래스로 바꾸면 작동이 됨
 $(function(){
 	//스크롤 시 네비 변경하기
 	let menu1 = $(".menu1");
@@ -21,10 +19,12 @@ $(function(){
 
 })
 function copy() {
-    /*복사 기능: execCommand기능 이용->textarea나 input내용밖에 카피 불가*/
-    const textArea = document.createElement('textarea');
+    
+    /*1) execCommand기능 이용
+    ->textarea나 input내용밖에 카피 불가*/
+    /*const textArea = document.createElement('textarea');
     textArea.value = `prettyjys@gmail.com`;
-    /*alert(textArea.value);*//*작동 확인용*/
+    
     document.body.appendChild(textArea);
     textArea.select();
     textArea.setSelectionRange(0, 99999);
@@ -32,5 +32,15 @@ function copy() {
     document.execCommand('copy');
     alert("copied");
     textArea.setSelectionRange(0, 0);
-    document.body.removeChild(textArea);
+    document.body.removeChild(textArea);*/
+
+	/* 2) Clipboard API 이용 -> 비동기적으로 클립보드에 접근하는 방법 제공, 최신 브라우저*/
+	/*js의 then()함수: 비동기 코드 작성시 사용*/
+	const textToCopy = 'prettyjys@gmail.com';
+	navigator.clipboard.writeText(textToCopy).then(function(){
+		alert('copied');
+	}).catch(function(error){
+		console.error('Error copying text: ', error);
+	});
+
 }
