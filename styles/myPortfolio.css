@@ -30,44 +30,37 @@ a {
 }
 #home {
 	background-color: lightgrey;
-	border: 1px solid darkgrey;
 }
 #title, /*.menu1,*/ .menu2 {
 	border: 1px solid darkgrey;
 }
 #about {
 	background-color: lightpink;
-	border: 1px solid darkgrey;
 }
 #skills {
 	background-color: lightyellow;
-	border: 1px solid darkgrey;
 }
 #activity{
 	background-color: lightgreen;
-	border: 1px solid darkgrey;
 }
 #contact{
 	background-color: lightblue;
-	border: 1px solid darkgrey;
 }
 
 /*** 레이아웃 크기 지정 ***/
 #container {
-	position:relative;
 	margin:0 auto;
-	width: 100%;
+	width: 100vw;
 	height: auto;
-	padding: 0;
 }
 #home{
 	position: relative;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 }
 #about, #skills, #activity, #contact {
  	height: auto;
- 	padding-bottom: 5%;
+ 	padding: 5%;
  }
 
 /*** 디자인 구체화 ***/
@@ -82,8 +75,12 @@ a {
 	padding: 0px 10px;
 } 
 #content_about, #content_skills, #content_activity,#content_contact {
-	margin: 7% 20% 0% 20%;
-	padding: 20px 5% 20px 5%;
+	position:relative;
+	left:50%;
+	transform: translateX(-50%);
+	width: 50vw;
+	height: auto;
+	padding: 5%;
 	background-color: rgba(255,255,255,0.7);
 	border-radius: 25px;
 }
@@ -158,9 +155,7 @@ a {
 	float:left;
 }
 #about .content{
-	width: 100%;
-	padding: 5px;
-	margin: 0px 0px 30px 0px;
+	padding:5%;
 	display: inline-block;
 	border:3px dashed black;
 	border-radius:10px;
@@ -177,8 +172,8 @@ a {
 #skills img:hover{
 	background-color: antiquewhite;
 	cursor: pointer;
-	transition:0.2s;
-	width:20.5%;
+	transition:0.5s;
+	width:25%;
 
 }
 
@@ -186,25 +181,34 @@ a {
 #activity img{
 	padding: 5px;
 	margin: 5px;
-	width: 40%;
+	width: 30%;
 	margin: 10px;
-	float:left;
+	align-items: left;
 }
 #activity .content{
 	width: 100%;
 	padding: 5px;
-	margin: 0px 0px 30px 0px;
-	display:inline-block;
+	display:flex;
 	border-radius: 10px;
 	background:rgba(0,0,0, 0.5);
 	color:white;
+}
+.content_header, .content_paragraph{
+	margin: 5px 20px 5px 20px;
+}
+button {
+	width: 30%;
+	height: 50px;
+	padding: 5px;
+	border-radius: 10px;
+	font-size: medium;
+	font-weight: bold;
 }
 
 
 
 /*** contact ***/
 #contact .content {
-	padding:0% 10% 0% 10%;
 	height:400px;
 }
 #contact p {
@@ -216,7 +220,7 @@ a {
 	position:relative;
 	display: block;
 	width: 200px;
-	left:52%;
+	left:50%;
 	transform: translateX(-50%);
 	margin:20px 0px;
 	border:1px solid darkgrey;
