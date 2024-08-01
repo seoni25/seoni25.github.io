@@ -178,33 +178,64 @@ a {
 }
 
 /*** Activity ***/
-#activity img{
-	padding: 5px;
-	margin: 5px;
-	width: 30%;
-	margin: 10px;
-	align-items: left;
-}
+/*content형태 2개: 사진이 위에 있는 형태 / 사진과 글이 나란한 형태*/
+/*content1*/
 #activity .content{
-	width: 100%;
-	padding: 5px;
-	display:flex;
+	width: auto;
+	margin: 10px 0px;
+	padding: 10px;
 	border-radius: 10px;
 	background:rgba(0,0,0, 0.5);
 	color:white;
+	display:block;
 }
-.content_header, .content_paragraph{
-	margin: 5px 20px 5px 20px;
+.content_image{
+	padding: 5px;
+	margin: 10px;
+	width: 80%;
+}
+.content_textBox{
+	padding: 5px;
+	margin: 10px;
+	width:80%;
+}
+/*content2*/
+#activity .content2{
+	width: auto;
+	margin: 10px 0px;
+	padding: 10px;
+	border-radius: 10px;
+	background:rgba(0,0,0, 0.5);
+	color:white;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+.content_image2{
+	padding: 5px;
+	margin: 10px;
+	width: 30%;
+}
+.content_textBox2{
+	padding: 5px;
+	margin: 10px;
+	width:50%;
+}
+/*content1과 2 공통요소*/
+#activity img{
+	width: 100%;
+}
+.content_head, .content_paragraph, button{
+	margin: 10px;
 }
 button {
-	width: 30%;
+	width: 100px;
 	height: 50px;
 	padding: 5px;
 	border-radius: 10px;
 	font-size: medium;
 	font-weight: bold;
 }
-
 
 
 /*** contact ***/
