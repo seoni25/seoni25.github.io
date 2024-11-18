@@ -1,0 +1,28 @@
+/*초기 설정*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+html {
+	scroll-behavior: smooth;
+}
+ul li, ol li {
+	list-style: none;
+}
+a {
+	text-decoration: none
+}
+#container {
+	margin: 0 auto;
+	width: 100vw;
+	height: 100vh;
+	background-color: lightgreen;
+}
+.content{
+	width: 80vw;
+	height: 80vh;
+	margin: 10px 0px;
+	padding: 10px;
+	background-color: white;
+	display: block;
+}
