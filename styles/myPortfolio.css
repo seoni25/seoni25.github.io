@@ -158,19 +158,28 @@ a {
 }
 
 /*** Skills ***/
-#skills img{
-	width: 20%;
+.skills_img{
+	width: 200px;
+	height: 200px;
 	margin: 20px;
-	display: inline;
 	background-color: lightgrey;
 	border-radius: 50%;
+	text-align: center;
 }
-#skills img:hover{
+.skills_div p{
+	margin:10px 0px;
+	font-size: medium;
+	font-weight:bold;
+}
+.skills_div{
+	display:inline-block;
+}
+.skills_img:hover{
 	background-color: antiquewhite;
 	cursor: pointer;
-	transition:0.5s;
-	width:25%;
-
+	transition:0.8s;
+	width: 230px;
+	height: 230px;
 }
 
 /*** Activity ***/
@@ -215,7 +224,7 @@ a {
 .content_textBox2{
 	padding: 5px;
 	margin: 10px;
-	width:50%;
+	width: 50%;
 }
 /*content1과 2 공통요소*/
 #activity img{
@@ -244,7 +253,7 @@ button:hover{
 	height:400px;
 }
 #contact p {
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 600;
 	text-align: center;
 }
