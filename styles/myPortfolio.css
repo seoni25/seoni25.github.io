@@ -94,7 +94,7 @@ a {
 	position:absolute;
 	top: 0px;
 	right: 0px;
-	width: 43%;
+	width: auto;
 	padding: 5px;
 	background-color: rgba(0,0,0,0.5);
 }
