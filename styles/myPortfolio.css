@@ -11,7 +11,7 @@ html {
 }
 #container {
 	position:relative;
-	width: 100%;
+	width: 100vw;
 	height: auto;
 	background-color: lightgrey;
 }
@@ -74,7 +74,7 @@ a {
 	position:relative;
 	left:50%;
 	transform: translateX(-50%);
-	width: 1000px;
+	width: 60%;
 	height: auto;
 	padding: 5%;
 	background-color: rgba(255,255,255,0.7);
