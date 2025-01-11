@@ -44,4 +44,7 @@ function copy() {
 	});*/
 
 }
-
+function href(href){
+	var openNewWindow = window.open("about:blank");
+	openNewWindow.location.href=href;
+}
